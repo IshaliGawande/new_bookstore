@@ -22,6 +22,7 @@
     "bootstrap": "^5.2.0-beta1",
     "chart.js": "^3.5.1",
     "country-state-city": "^3.0.1",
+    "jquery": "^3.6.0",
     "overlay-navbar": "^1.2.3",
     "react": "^17.0.2",
     "react-alert": "^7.0.3",

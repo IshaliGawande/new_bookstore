@@ -51,12 +51,14 @@ import "./css/bootstrap.css";
 import "./css/style.css";
 import "./css/responsive.css";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+//import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 //import { solid, regular } from "@fortawesome/fontawesome-svg-core/import.macro";
-import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 import storelogo from "../Header/images/storelogo.png";
 
+import "bootstrap/dist/css/bootstrap.css";
+import "jquery/dist/jquery.min.js"; // Have to install and import jQuery because of bootstrap modal's dependency
 import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 const Header = () => {
   return (
