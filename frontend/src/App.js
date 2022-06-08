@@ -44,7 +44,6 @@ import Contact from "./component/layout/Contact/Contact";
 import About from "./component/layout/About/About";
 import NotFound from "./component/layout/Not Found/NotFound";
 
-import "bootstrap/dist/css/bootstrap.css";
 import "jquery/dist/jquery.min.js"; // Have to install and import jQuery because of bootstrap modal's dependency
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";

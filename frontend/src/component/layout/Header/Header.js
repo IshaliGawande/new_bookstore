@@ -52,8 +52,8 @@ import "./css/style.css";
 import "./css/responsive.css";
 import { Link } from "react-router-dom";
 //import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-//import { solid, regular } from "@fortawesome/fontawesome-svg-core/import.macro";
 import storelogo from "../Header/images/storelogo.png";
+//import { Button, Collapse } from "react-bootstrap";
 
 import "bootstrap/dist/css/bootstrap.css";
 import "jquery/dist/jquery.min.js"; // Have to install and import jQuery because of bootstrap modal's dependency
@@ -61,6 +61,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 const Header = () => {
+  //  const [open, setOpen] = useState(false);
   return (
     <header class="header_section">
       <div class="container-fluid">
@@ -73,14 +74,23 @@ const Header = () => {
           <button
             class="navbar-toggler"
             type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
             <span class=""> </span>
           </button>
+
+          {/* <Button
+            class="navbar-toggler"
+            onClick={() => setOpen(!open)}
+            aria-controls="navbarSupportedContent"
+            aria-expanded={open}
+          >
+            <span class=""> </span>
+          </Button> */}
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
