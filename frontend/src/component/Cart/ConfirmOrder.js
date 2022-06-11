@@ -85,7 +85,7 @@ const ConfirmOrder = ({ history }) => {
             <div>
               <div>
                 <p>Subtotal:</p>
-                <span>₹{subtotal}</span>
+                <span>₹{subtotal.toFixed(2)}</span>
               </div>
               <div>
                 <p>Shipping Charges:</p>
@@ -101,7 +101,7 @@ const ConfirmOrder = ({ history }) => {
               <p>
                 <b>Total:</b>
               </p>
-              <span>₹{totalPrice}</span>
+              <span>₹{totalPrice.toFixed(2)}</span>
             </div>
 
             <button onClick={proceedToPayment}>Proceed To Payment</button>

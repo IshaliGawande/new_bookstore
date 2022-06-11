@@ -13,7 +13,7 @@ import MetaData from "../layout/MetaData";
 import DeleteIcon from "@material-ui/icons/Delete";
 import Star from "@material-ui/icons/Star";
 
-import SideBar from "./Sidebar";
+import SideBar from "../extra/Sidebar";
 import { DELETE_REVIEW_RESET } from "../../constants/productConstants";
 
 const ProductReviews = ({ history }) => {

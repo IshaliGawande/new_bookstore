@@ -10,7 +10,7 @@ import DescriptionIcon from "@material-ui/icons/Description";
 import StorageIcon from "@material-ui/icons/Storage";
 import SpellcheckIcon from "@material-ui/icons/Spellcheck";
 import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
-import SideBar from "./Sidebar";
+import SideBar from "../extra/Sidebar";
 import { NEW_PRODUCT_RESET } from "../../constants/productConstants";
 
 const NewProduct = ({ history }) => {
@@ -27,7 +27,14 @@ const NewProduct = ({ history }) => {
   const [images, setImages] = useState([]);
   const [imagesPreview, setImagesPreview] = useState([]);
 
-  const categories = ["Old-Books", "Notes", "Accessories","Referance Books","Interview Prep","Coding"];
+  const categories = [
+    "Old-Books",
+    "Notes",
+    "Accessories",
+    "Referance Books",
+    "Interview Prep",
+    "Coding",
+  ];
 
   useEffect(() => {
     if (error) {
@@ -37,7 +44,7 @@ const NewProduct = ({ history }) => {
 
     if (success) {
       alert.success("Product Created Successfully");
-      history.push("/admin/dashboard");
+      history.push("/user/dashboard");
       dispatch({ type: NEW_PRODUCT_RESET });
     }
   }, [dispatch, alert, error, history, success]);

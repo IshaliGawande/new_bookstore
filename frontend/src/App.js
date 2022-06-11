@@ -4,7 +4,7 @@ import Header from "./component/layout/Header/Header.js";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import WebFont from "webfontloader";
 import React from "react";
-import Footer from "./component/layout/Footer/Footer";
+//import Footer from "./component/layout/Footer/Footer";
 import Home from "./component/Home/Home";
 import ProductDetails from "./component/Product/ProductDetails";
 import Products from "./component/Product/Products";
@@ -47,6 +47,14 @@ import NotFound from "./component/layout/Not Found/NotFound";
 import "jquery/dist/jquery.min.js"; // Have to install and import jQuery because of bootstrap modal's dependency
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+
+import ProductListi from "./component/Ishali/ProductListi.js";
+
+import OrderListi from "./component/Ishali/OrderListi";
+
+import UsersListi from "./component/Ishali/UsersListi";
+
+import UpdateUseri from "./component/Ishali/UpdateUseri";
 
 function App() {
   const { isAuthenticated, user } = useSelector((state) => state.user);
@@ -183,6 +191,31 @@ function App() {
           path="/admin/reviews"
           //  isAdmin={true}
           component={ProductReviews}
+        />
+
+        <ProtectedRoute
+          exact
+          path="/ishali/products"
+          isAdmin={true}
+          component={ProductListi}
+        />
+        <ProtectedRoute
+          exact
+          path="/ishali/orders"
+          isAdmin={true}
+          component={OrderListi}
+        />
+        <ProtectedRoute
+          exact
+          path="/ishali/users"
+          isAdmin={true}
+          component={UsersListi}
+        />
+        <ProtectedRoute
+          exact
+          path="/ishali/user/:id"
+          isAdmin={true}
+          component={UpdateUseri}
         />
 
         <Route

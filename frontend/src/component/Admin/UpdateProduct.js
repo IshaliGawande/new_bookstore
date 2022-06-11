@@ -13,7 +13,7 @@ import DescriptionIcon from "@material-ui/icons/Description";
 import StorageIcon from "@material-ui/icons/Storage";
 import SpellcheckIcon from "@material-ui/icons/Spellcheck";
 import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
-import SideBar from "./Sidebar";
+import SideBar from "../extra/Sidebar";
 import { UPDATE_PRODUCT_RESET } from "../../constants/productConstants";
 
 const UpdateProduct = ({ history, match }) => {
@@ -38,7 +38,12 @@ const UpdateProduct = ({ history, match }) => {
   const [imagesPreview, setImagesPreview] = useState([]);
 
   const categories = [
-    "Old-Books","Notes","Accessories","Referance Books","Interview Prep","Coding"
+    "Old-Books",
+    "Notes",
+    "Accessories",
+    "Referance Books",
+    "Interview Prep",
+    "Coding",
   ];
 
   const productId = match.params.id;

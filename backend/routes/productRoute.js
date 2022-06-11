@@ -35,4 +35,8 @@ router
   .get(getProductReviews)
   .delete(isAuthenticatedUser, deleteReview);
 
+/////////////////////////////////////////////////////////////
+
+router.route("/ishali/products").get(isAuthenticatedUser, getAdminProducts);
+
 module.exports = router;

@@ -13,10 +13,10 @@ import { Button } from "@material-ui/core";
 import MetaData from "../layout/MetaData";
 import EditIcon from "@material-ui/icons/Edit";
 import DeleteIcon from "@material-ui/icons/Delete";
-import SideBar from "../extra/Sidebar";
+import SideBar from "./Sidebar";
 import { DELETE_PRODUCT_RESET } from "../../constants/productConstants";
 
-const ProductList = ({ history }) => {
+const ProductListi = ({ history }) => {
   const dispatch = useDispatch();
 
   const alert = useAlert();
@@ -26,10 +26,6 @@ const ProductList = ({ history }) => {
   const { error: deleteError, isDeleted } = useSelector(
     (state) => state.product
   );
-
-  const user = useSelector((state) => state.user);
-  const nowId = user.user._id;
-  const userproducts = products.filter((it) => it.user === nowId);
 
   const deleteProductHandler = (id) => {
     dispatch(deleteProduct(id));
@@ -48,7 +44,7 @@ const ProductList = ({ history }) => {
 
     if (isDeleted) {
       alert.success("Product Deleted Successfully");
-      history.push("/user/dashboard");
+      history.push("/admin/dashboard");
       dispatch({ type: DELETE_PRODUCT_RESET });
     }
 
@@ -109,8 +105,8 @@ const ProductList = ({ history }) => {
 
   const rows = [];
 
-  userproducts &&
-    userproducts.forEach((item) => {
+  products &&
+    products.forEach((item) => {
       rows.push({
         id: item._id,
         stock: item.Stock,
@@ -142,4 +138,4 @@ const ProductList = ({ history }) => {
   );
 };
 
-export default ProductList;
+export default ProductListi;

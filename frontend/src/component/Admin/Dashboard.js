@@ -204,19 +204,19 @@ const Dashboard = () => {
         <div className="dashboardSummary">
           <div>
             <p>
-              Total Amount <br /> ₹{totalAmount}
+              Total Amount <br /> ₹{totalAmount.toFixed(2)}
             </p>
           </div>
           <div className="dashboardSummaryBox2">
-            <Link to="/admin/products">
+            <Link to="/ishali/products">
               <p>Product</p>
               <p>{products && products.length}</p>
             </Link>
-            <Link to="/admin/orders">
+            <Link to="/ishali/orders">
               <p>Orders</p>
               <p>{orders && orders.length}</p>
             </Link>
-            <Link to="/admin/users">
+            <Link to="/ishali/users">
               <p>Users</p>
               <p>{users && users.length}</p>
             </Link>

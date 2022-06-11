@@ -21,6 +21,9 @@ router.route("/user/orders").get(isAuthenticatedUser, getAllOrders);
 
 router.route("/admin/orders").get(isAuthenticatedUser, getAllOrders);
 
+router.route("/ishali/orders").get(isAuthenticatedUser, getAllOrders);
+
+
 router
   .route("/admin/order/:id")
   .put(isAuthenticatedUser, updateOrder)

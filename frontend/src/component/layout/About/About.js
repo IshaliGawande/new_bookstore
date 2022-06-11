@@ -6,7 +6,7 @@ import "./css/style.css";
 import "./css/responsive.css";
 import about_img from "../About/images/about-img.png";
 
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 

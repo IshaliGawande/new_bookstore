@@ -8,7 +8,7 @@ import { Button } from "@material-ui/core";
 import MetaData from "../layout/MetaData";
 import EditIcon from "@material-ui/icons/Edit";
 import DeleteIcon from "@material-ui/icons/Delete";
-import SideBar from "./Sidebar";
+import SideBar from "../extra/Sidebar";
 import {
   deleteOrder,
   getAllOrders,

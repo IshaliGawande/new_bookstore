@@ -43,4 +43,10 @@ router
   .put(isAuthenticatedUser, authorizeRoles("admin"), updateUserRole)
   .delete(isAuthenticatedUser, authorizeRoles("admin"), deleteUser);
 
+//////////////////////////////////////////////////////////////////////////////////
+
+router
+  .route("/ishali/users")
+  .get(isAuthenticatedUser, authorizeRoles("admin"), getAllUser);
+
 module.exports = router;
